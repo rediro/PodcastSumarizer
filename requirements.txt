@@ -1,0 +1,21 @@
+pip install \
+    git+https://github.com/ibm-granite-community/utils \
+    transformers \
+    langchain_community \
+    langchain-huggingface \
+    langchain-ollama \
+    langchain-milvus \
+    replicate \
+    fastapi \
+    uvicorn \
+    yt-dlp \
+    whisper \
+    python-multipart \
+    wget \
+    streamlit
+huggingface-cli login
+echo 'export HUGGINGFACE_HUB_TOKEN="your_huggingface_token"' >> ~/.zshrc
+source ~/.zshrc
+export REPLICATE_API_TOKEN=inser your replicate token
+uvicorn backend:app --host 127.0.0.1 --port 8000 --reload\n
+streamlit frontend.py
